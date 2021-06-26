@@ -1,0 +1,90 @@
+* {
+   margin: 0;
+   box-sizing: border-box;
+   outline: none;
+   border: none;
+   padding: 0;
+
+   body {
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center center;
+      background-image: url(./img/wallpaperflare.com_wallpaper.jpg);
+   }
+}
+
+.hamburgerMenuBtn {
+   display: flex;
+   justify-content: flex-end;
+   height: 70px;
+}
+
+.menu-btn {
+   button {
+      padding: 10px 30px 0px;
+      color: #fff !important;
+      font-size: 35px;
+      background: transparent;
+      cursor: pointer;
+
+      &.active {
+         transform: translate(-50deg);
+      }
+   }
+}
+
+
+#openHamburger {
+   .sidebar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 0%;
+      transition: 500ms all;
+      position: relative;
+      visibility: hidden;
+      opacity: 0;
+      height: calc(100vh - 70px);
+      background: rgba(221, 160, 221, 0.137);
+
+      &.active {
+         width: 100%;
+         visibility: visible;
+         opacity: 1;
+      }
+
+      nav {
+         ul {
+            list-style: none;
+
+            li {
+               margin-bottom: 65px;
+               color: #fff;
+               font-size: 35px;
+               cursor: pointer;
+               transition: 500ms all;
+               &:hover{
+                  transform: scale(1.1);
+               }
+            }
+         }
+      }
+   }
+
+   .close {
+      position: absolute;
+      top: 5%;
+      right: 10%;
+      background: transparent;
+      font-size: 45px;
+      color: palevioletred;
+      cursor: pointer;
+
+      &.active {
+         width: 0%;
+      }
+   }
+}
